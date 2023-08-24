@@ -30,7 +30,7 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 
 ## Solution
 ![Video](https://i.imgur.com/UYCaZkp.gif)
-![Path](https://i.imgur.com/EWTWwQT.png)
+<img src="https://i.imgur.com/EWTWwQT.png" alt="Image" style="width:75%; height:75%;">
 ## Instillation
 
 ### Ros2 Humble
@@ -46,7 +46,7 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 
 ## 🎈 Usage <a name="usage"></a>
 
-- Gui opens and you can instantly send commands from **2d goal pose** ![goal](https://i.imgur.com/gsQyRdB.png)
+- Gui opens and you can instantly send commands from **2d goal pose** <img src="https://i.imgur.com/gsQyRdB.png" alt="Image" style="width:75%; height:75%;">
 
 ### Ros2 Humble
 1. `cd working_dir/zal_robotics_engineer_task`
@@ -55,7 +55,7 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 1. run `docker run -d --rm --net=ros  --env="DISPLAY_WIDTH=3000" --env="DISPLAY_HEIGHT=1800" --env="RUN_XTERM=no" --name=novnc -p=8080:8080  theasp/novnc:latest`
 2. run `docker run  -it --net="ros"  --privileged omarwalid96/ros2-zal-task /bin/bash -c "sleep 2;cd /home/zal_robotics_engineer_task ; source /opt/ros/humble/setup.bash; source ./install/setup.bash; ros2 launch omni_bot zal_task.launch.py"`
 3. connect to viewer on `http://localhost:8080/vnc.html`
-![Connect](https://i.imgur.com/ohAMiEX.png)
+<img src="https://i.imgur.com/ohAMiEX.png" alt="Image" style="width:75%; height:75%;">
 
 
 ## ✍️ Authors <a name = "authors"></a>
