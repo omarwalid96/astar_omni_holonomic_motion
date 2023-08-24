@@ -174,28 +174,32 @@ Simulation Modified to work with **ros2** and also holonomic motion plugin was a
 │   │   ├── package.xml
 │   │   └── scripts
 │   │       └── waypointCommands.py
-│   └── omni_bot
+│   ├── omni_bot
+│   │   ├── CMakeLists.txt
+│   │   ├── config
+│   │   │   ├── astar.rviz
+│   │   │   └── omni_bot.yaml
+│   │   ├── launch
+│   │   │   ├── robot_state_publisher.launch.py
+│   │   │   ├── spawn_robot.launch.py
+│   │   │   └── zal_task.launch.py
+│   │   ├── meshes
+│   │   │   └── chassis.STL
+│   │   ├── omni_bot
+│   │   │   └── __init__.py
+│   │   ├── package.xml
+│   │   ├── scripts
+│   │   │   └── omniController.py
+│   │   └── urdf
+│   │       ├── main.xacro
+│   │       ├── plugins.gazebo
+│   │       ├── rim.xacro
+│   │       └── roller.xacro
+│   └── omni_msgs
 │       ├── CMakeLists.txt
-│       ├── config
-│       │   ├── astar.rviz
-│       │   └── omni_bot.yaml
-│       ├── launch
-│       │   ├── robot_state_publisher.launch.py
-│       │   ├── spawn_robot.launch.py
-│       │   └── zal_task.launch.py
-│       ├── meshes
-│       │   └── chassis.STL
 │       ├── msg
 │       │   └── OmniDrive.msg
-│       ├── omni_bot
-│       │   └── __init__.py
-│       ├── package.xml
-│       ├── scripts
-│       │   └── omniController.py
-│       └── urdf
-│           ├── main.xacro
-│           ├── plugins.gazebo
-│           ├── rim.xacro
-│           └── roller.xacro
+│       └── package.xml
 └── style.css
+
 ```
