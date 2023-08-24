@@ -10,6 +10,12 @@ from rclpy.node import Node
 
 class PIDController:
     def __init__(self, kp, ki, kd):
+        """!__init__ Initalize PID Controller
+
+        @param kp: Proportional Gain @type kp: float
+        @param ki: Integral Gain @type ki: float
+        @param kd: Diffrential Gain @type kd: float
+        """
         self.kp = kp
         self.ki = ki
         self.kd = kd
@@ -17,6 +23,11 @@ class PIDController:
         self.integral = 0
         
     def compute(self, error):
+        """!compute PID with stored variables
+
+        @param error: error between goal and current position @type error: float
+        @return: speed   @rtype: float
+        """
         self.integral += error
         derivative = error - self.prev_error
         output = self.kp * error + self.ki * self.integral + self.kd * derivative
@@ -25,6 +36,12 @@ class PIDController:
 
 class WaypointFollower(Node):
     def __init__(self):
+        """!__init__ Waypoint Follower
+        Subscribes to /path
+        Subscribes to /odom
+        Publishes Velocity Command /cmd_vel
+        
+        """
         super().__init__('waypoint_follower')
         
         self.path = None
@@ -40,14 +57,25 @@ class WaypointFollower(Node):
         self.pid_linear_y = PIDController(kp=28.0, ki=0.0, kd=22.0)
 
     def path_callback(self, path_msg):
+        """!path_callback fetches data from planner
+
+        @param path_msg: Distance Trajectory @type path_msg: Path
+        """
         print("Length of path ", len(path_msg.poses))
         self.path = path_msg.poses
         self.current_waypoint = 0
     
     def pose_callback(self, pose_msg):
+        """!pose_callback Current Robot Pose
+
+        @param pose_msg: robot pose @type pose_msg: Odometry
+        """
         self.robot_pose = pose_msg.pose.pose
         
     def run(self):
+        """!run Control Loop
+        Itterates over path and calculates desired velocity to reach point
+        """
         if self.path is not None and self.robot_pose is not None:
             if len(self.path) <= 1:
                 self.path = None

@@ -1,0 +1,27 @@
+pages:
+  stage: build
+  image: ubuntu:18.04
+  script:
+    # - yum clean all
+    # - yum makecache
+    - apt-get -y update
+    - apt-get -y install doxygen
+    - apt-get -y install graphviz
+    - apt-get -y install software-properties-common
+    - apt-get -y update
+    - add-apt-repository universe
+    - apt-get -y install texlive-generic-recommended
+    # - apt-get -y install texlive texlive-utils
+    - apt-get install -y curl
+    # - bash -c "curl -L https://raw.githubusercontent.com/riboseinc/plantuml-install/master/centos.sh | bash"
+    - bash -c "curl -L https://raw.githubusercontent.com/riboseinc/plantuml-install/master/ubuntu.sh | bash"
+    # - /bin/sh ubuntu.sh
+    - doxygen Doxyfile
+    - mv docs/html/ public/
+    - mv style.css public/
+    - if [ -d "readmeImages" ]; then mv readmeImages/ public/readmeImages/ ; fi
+  artifacts:
+    paths:
+      - public
+
+      

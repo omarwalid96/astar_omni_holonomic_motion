@@ -19,6 +19,14 @@ class OdometryPublisher:
         self.actual_distance = 0.0
 
     def update(self, linear_velocity_x, linear_velocity_y, angular_velocity, delta_t):
+        """!update Updates Odomety based on new Calculations 
+        Velocity Vectors affects each other, Also small error percentage was accounted for
+
+        @param linear_velocity_x: velocity vector in x @type linear_velocity_x: float
+        @param linear_velocity_y: velocity vector in y @type linear_velocity_y: float
+        @param angular_velocity: angular velocity @type angular_velocity: fload
+        @param delta_t: difference between readings @type delta_t: float
+        """
         delta_theta = angular_velocity * delta_t
         avg_theta = self.theta + delta_theta 
 
@@ -33,6 +41,10 @@ class OdometryPublisher:
         self.theta += delta_theta
 
     def get_odometry(self):
+        """!get_odometry returns stored varaiables
+
+        @return: current x,y pose and yaw @rtype: float, float, float
+        """
         return self.x, self.y, self.theta
 
 class OmniDriveController(Node):
@@ -52,7 +64,7 @@ class OmniDriveController(Node):
             Twist, 'cmd_vel', self.twist_callback, 10)
         
         self.odom_publisher = self.create_publisher(
-            Odometry, 'odom_test', 1)
+            Odometry, 'odom_calc', 1)
         
         self.twist_publisher = self.create_publisher(
             Twist, 'cmd_vel', 1)
@@ -60,6 +72,10 @@ class OmniDriveController(Node):
         self.rate = self.create_rate(50)  # 50 Hz update rate
     
     def twist_callback(self, twist_msg):
+        """!twist_callback Subscribes to velocity vector and passes data to Odometry update class
+        publishes Odometry and TF
+        @param twist_msg: Velocity Vector  @type twist_msg: Twist
+        """
         current_time = self.get_clock().now()
         delta_t = (current_time - self.last_callback_time).to_sec()
         Vx = twist_msg.linear.x
@@ -72,7 +88,7 @@ class OmniDriveController(Node):
         # Publish odometry position
         odom_msg = Odometry()
         odom_msg.header.stamp = current_time.to_msg()
-        odom_msg.header.frame_id = 'odom'
+        odom_msg.header.frame_id = 'odom_calc'
         odom_msg.child_frame_id = 'base_link'
         odom_msg.pose.pose.position.x = self.robot_x
         odom_msg.pose.pose.position.y = self.robot_y
@@ -90,7 +106,7 @@ class OmniDriveController(Node):
         # Publish tf transform
         transform_stamped = TransformStamped()
         transform_stamped.header.stamp = current_time.to_msg()
-        transform_stamped.header.frame_id = 'odom'
+        transform_stamped.header.frame_id = 'odom_calc'
         transform_stamped.child_frame_id = 'base_link'
         transform_stamped.transform.translation.x = self.robot_x
         transform_stamped.transform.translation.y = self.robot_y
@@ -104,7 +120,7 @@ class OmniDriveController(Node):
         map_to_odom = TransformStamped()
         map_to_odom.header.stamp = current_time.to_msg()
         map_to_odom.header.frame_id = 'map'
-        map_to_odom.child_frame_id = 'odom'
+        map_to_odom.child_frame_id = 'odom_calc'
         map_to_odom.transform.translation.x = self.robot_x
         map_to_odom.transform.translation.y = self.robot_y
         map_to_odom.transform.rotation.x = 0.0

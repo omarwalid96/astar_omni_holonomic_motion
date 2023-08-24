@@ -8,7 +8,11 @@
 class Cell:
     
     def __init__(self, x_pos, y_pos): # takes the x and y position as parameters
-        
+        """!__init__ Initalize Cell
+
+        @param x_pos: cell position in x @type x_pos: int
+        @param y_pos: cell position in y @type y_pos: int
+        """
         # initializes all the variables used
         self.x_pos = x_pos
         self.y_pos = y_pos
@@ -21,7 +25,14 @@ class Cell:
 
     # this function adds all the neighbors for each cell
     def addNeighbors(self, grid, column, row, count_diagonal):
+        """!addNeighbors 
+        Discovers surrounding neighbours to current cell
 
+        @param grid: full grid @type grid: list[int][int]
+        @param column: position x @type column: int
+        @param row: position y @type row: int
+        @param count_diagonal: turn on or off diagonal search @type count_diagonal: bool
+        """
         # checks if the x position is greater than 0 and if so adds the cell to the left as a neighbor
         if self.x_pos > 0:
             self.neighbors.append(grid[self.x_pos - 1][self.y_pos])
@@ -52,20 +63,3 @@ class Cell:
 
             if self.x_pos < column - 1 and self.y_pos > 0:
                 self.neighbors.append(grid[self.x_pos + 1][self.y_pos - 1])
-
-    # this function will set the color of the cell and its shape
-    def colorCell(self, win, color, shape):
-        side = 20
-
-        # checks if it is supposed to draw a node
-        if shape == "node":
-            pygame.draw.circle(win, color, (self.x_pos*side+9, self.y_pos*side+9), side//3) # draws the node in the correct location
-
-        # checks if it is supposed to draw a square
-        elif shape == "small square":
-            pygame.draw.rect(win, color, (self.x_pos * side, self.y_pos * side, side - 2, side - 2)) # draws the square in the correct location
-
-        # checks if it is supposed to draw a circle
-        elif shape == "circle":
-            pygame.draw.circle(win, color, (self.x_pos*side+9, self.y_pos*side+9), side//6) # draws the circle in the correct location
-

@@ -13,7 +13,7 @@ from tf_transformations import euler_from_quaternion
 
 import numpy as np
 
-class RobotSimulationNode(Node):
+class RobotFootprintNode(Node):
     def __init__(self):
         super().__init__('robot_footprint')
         self.get_logger().info("---------------------Robot Footprint Node Initalized----------------------")
@@ -45,6 +45,10 @@ class RobotSimulationNode(Node):
         self.timer = self.create_timer(0.1, self.timer_callback)
 
     def odometry_callback(self, odom_msg):
+        """!odometry_callback Subscribe to Robots Odometry to publish location as a footprint
+
+        @param odom_msg: robot pose @type odom_msg: Odometry
+        """
         self.robot_x = odom_msg.pose.pose.position.x
         self.robot_y = odom_msg.pose.pose.position.y
 
@@ -58,6 +62,8 @@ class RobotSimulationNode(Node):
         self.robot_theta = euler_angles[2]
 
     def timer_callback(self):
+        """!timer_callback Footprint publisher loop /robot_footprint_polygon
+        """
         try:
             transform = self.tf_buffer.lookup_transform(
                 'map', 'base_footprint', rclpy.time.Time(seconds=0.0), rclpy.time.Duration(seconds=1.0)
@@ -102,9 +108,9 @@ class RobotSimulationNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    robot_simulation_node = RobotSimulationNode()
-    rclpy.spin(robot_simulation_node)
-    robot_simulation_node.destroy_node()
+    robot_footprint_node = RobotFootprintNode()
+    rclpy.spin(robot_footprint_node)
+    robot_footprint_node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

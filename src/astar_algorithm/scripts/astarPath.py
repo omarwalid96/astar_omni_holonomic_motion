@@ -16,6 +16,8 @@ from std_msgs.msg import Header
 
 class AStarNode(Node):
     def __init__(self):
+        """!__init__ AstarNode init
+        """
         super().__init__('astar')
         self.get_logger().info("---------------------A* Node Initalized----------------------")
 
@@ -58,6 +60,8 @@ class AStarNode(Node):
         self.marker_pub = self.create_publisher(Marker, '/goal_marker', 1)
 
     def init_grid(self):
+        """!init_grid Initalize grid based on task input
+        """
         for x in range(self.grid_cols):
             row_list = []
             for y in range(self.grid_rows):
@@ -70,9 +74,18 @@ class AStarNode(Node):
                 self.grid[x][y].wall = False
 
     def heuristic(self, current_node, end_node):
+        """!heuristic calculate cost based on educlidean distance from current Cell to end
+
+        @param current_node: current cell @type current_node: Cell
+        @param end_node: final cell @type end_node: Cell
+        @return: cost @rtype: float
+        """
         return math.sqrt((current_node.x_pos - end_node.x_pos)**2 + abs(current_node.y_pos - end_node.y_pos)**2)
 
     def a_star_backtrack(self, current):
+        """!a_star_backtrack Back track discovered path, and publish trajectory
+        @param current: current Cell @type current: Cell
+        """
         in_path = current
         while True:
             if in_path.previous_node is None or in_path.previous_node == self.start:
@@ -101,6 +114,9 @@ class AStarNode(Node):
         self.path = []
 
     def a_star_search(self):
+        """!a_star_search Main A* algorithm logic, checks free and occupied cells, loops overs the cells based
+        on the cost and when the end goal is reached, the back track function is called to assure the path
+        """
         self.start.h_score = self.heuristic(self.start, self.end)
         self.open_list.append(self.start)
 
@@ -139,6 +155,10 @@ class AStarNode(Node):
                             cells.previous_node = current_node
 
     def goal_callback(self, msg):
+        """!goal_callback Subscribes to  /move_base_simple/goal and gets data from rviz
+
+        @param msg: goal data @type msg: PoseStamped
+        """
         goal_x = msg.pose.position.x
         goal_y = msg.pose.position.y
         self.end = self.grid[int(goal_x / self.grid_resolution)][int(goal_y / self.grid_resolution)]
@@ -150,11 +170,19 @@ class AStarNode(Node):
         self.a_star_search()
 
     def odom_callback(self, msg):
+        """!odom_callback Subscribes to /odom to get current robot pose
+
+        @param msg: robot current pose @type msg: Odometry
+        """
         pos_x = msg.pose.pose.position.x
         pos_y = msg.pose.pose.position.y
         self.start = self.grid[int(pos_x / self.grid_resolution)][int(pos_y / self.grid_resolution)]
 
     def publish_goal_marker(self, point):
+        """!publish_goal_marker Publish marker for the desired goal /goal_marker
+
+        @param point: goal pose @type point: Point
+        """
         goal_marker = Marker()
         goal_marker.header = Header()
         goal_marker.header.frame_id = 'map'

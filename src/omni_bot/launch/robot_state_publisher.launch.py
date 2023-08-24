@@ -60,41 +60,7 @@ def generate_launch_description():
 
         Node(
             package="omni_bot",
-            executable="mapPublisher.py",
-            name="mapPublisher"),
-
-        
-        Node(
-            package="omni_bot",
-            executable="robotFootprint.py",
-            name="robotFootprint"),
-
-        Node(
-            package="tf2_ros",
-            executable="static_transform_publisher",
-            name="map_tf", arguments=[
-                "--frame-id", "map",        
-                "--child-frame-id", "odom"  
-            ]),
-
-        Node(
-            package="omni_bot",
-            executable="astarPath.py",
-            name="astar"),
-
-        Node(
-            package="rviz2",
-            executable="rviz2",
-            name="rviz2",
-            arguments=[
-                '-d', LaunchConfiguration('rviz_config')
-            ],
-        ),
-
-        Node(
-            package="omni_bot",
-            executable="waypointCommands.py",
-            name="waypointCommands",
-        )
+            executable="omniController.py",
+            name="omniController")
 
     ])
