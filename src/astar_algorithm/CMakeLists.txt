@@ -21,7 +21,7 @@ find_package(rclpy REQUIRED)
 ################################################################################
 # Install
 ################################################################################
-install(DIRECTORY meshes launch config urdf
+install(DIRECTORY  launch  
   DESTINATION share/${PROJECT_NAME}
 )
 ament_python_install_package(${PROJECT_NAME})

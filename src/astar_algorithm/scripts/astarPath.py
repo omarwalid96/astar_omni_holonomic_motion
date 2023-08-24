@@ -3,7 +3,7 @@
 import math
 import random
 import sys
-from omni_bot.cell import Cell  # Assuming your Cell class is in a file called cell.py in the my_package package
+from astar_algorithm.cell import Cell  
 from nav_msgs.msg import Path
 from geometry_msgs.msg import PoseStamped
 import rclpy

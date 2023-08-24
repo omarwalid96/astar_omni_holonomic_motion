@@ -6,7 +6,7 @@ from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from tf2_ros import TransformBroadcaster
 from geometry_msgs.msg import TransformStamped
-from omni_bot.msg import OmniDrive
+from omni_msgs.msg import OmniDrive
 from rclpy.node import Node
 from tf_transformations import euler_from_quaternion  # Add this import
 
@@ -52,8 +52,8 @@ class OdometryPublisher:
 class OmniDriveController(Node):
     def __init__(self):
         super().__init__('omni_drive_controller')
-        self.tf_broadcaster = TransformBroadcaster()
-        self.map_to_odom_broadcaster = TransformBroadcaster()
+        self.tf_broadcaster = TransformBroadcaster(self)
+        self.map_to_odom_broadcaster = TransformBroadcaster(self)
         
         self.robot_x = 0.0
         self.robot_y = 0.0

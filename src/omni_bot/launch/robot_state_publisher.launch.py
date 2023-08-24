@@ -56,6 +56,14 @@ def generate_launch_description():
             emulate_tty=True,
             parameters=[{"use_sim_time":True,"robot_description": Command(["xacro ",desc_path])}],
              arguments=[urdf]),
+        Node(
+            package="rviz2",
+            executable="rviz2",
+            name="rviz2",
+            arguments=[
+                '-d', LaunchConfiguration('rviz_config')
+            ],
+        ),
 
 
         Node(
