@@ -2,7 +2,7 @@
 # Set minimum required version of cmake, project name and compile options
 ################################################################################
 cmake_minimum_required(VERSION 3.5)
-project(omni_bot)
+project(astar_algorithm)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 17)
@@ -16,7 +16,6 @@ endif()
 # Find ament packages and libraries for ament and system dependencies
 ################################################################################
 find_package(ament_cmake REQUIRED)
-find_package(urdf REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 ################################################################################
@@ -27,10 +26,12 @@ install(DIRECTORY meshes launch config urdf
 )
 ament_python_install_package(${PROJECT_NAME})
 
+
 install(PROGRAMS
-  scripts/omniController.py
+  scripts/astarPath.py
   DESTINATION lib/${PROJECT_NAME}
 )
+
 ################################################################################
 # Macro for ament package
 ################################################################################

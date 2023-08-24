@@ -27,6 +27,10 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     launch_file_dir = os.path.join(get_package_share_directory('omni_bot'), 'launch')
+    astar_launch_file_dir = os.path.join(get_package_share_directory('astar_algorithm'), 'launch')
+    map_launch_file_dir = os.path.join(get_package_share_directory('map_publisher'), 'launch')
+    navigation_launch_file_dir = os.path.join(get_package_share_directory('navigation_control'), 'launch')
+    
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
     
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
@@ -64,7 +68,7 @@ def generate_launch_description():
         launch_arguments={'use_sim_time': use_sim_time}.items()
     )
 
-    spawn_turtlebot_cmd = IncludeLaunchDescription(
+    spawn_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(launch_file_dir, 'spawn_robot.launch.py')
         ),
@@ -74,12 +78,34 @@ def generate_launch_description():
         }.items()
     )
 
+
+    astar_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(astar_launch_file_dir, 'astar.launch.py')
+        )
+    )
+
+    map_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(map_launch_file_dir, 'map_publisher.launch.py')
+        )
+    )
+
+    navigation_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(navigation_launch_file_dir, 'navigation_control.launch.py')
+        )
+    )
+
     ld = LaunchDescription()
 
     # Add the commands to the launch description
     ld.add_action(gazebo_cmd)
-    # ld.add_action(gzclient_cmd)
+    ld.add_action(gzclient_cmd)
     ld.add_action(robot_state_publisher_cmd)
-    ld.add_action(spawn_turtlebot_cmd)
+    ld.add_action(spawn_cmd)
+    ld.add_action(astar_cmd)
+    ld.add_action(map_cmd)
+    ld.add_action(navigation_cmd)
 
     return ld

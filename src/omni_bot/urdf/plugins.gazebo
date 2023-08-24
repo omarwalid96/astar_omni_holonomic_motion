@@ -3,12 +3,6 @@
   <gazebo reference="base_link">
     <material>Gazebo/Orange</material>
   </gazebo>
- <!-- <gazebo>
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/omni_bot</robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-    </plugin>
- </gazebo> -->
  <gazebo>
 	    <plugin name="omni_steering" filename="libgazebo_ros_planar_move.so">
 	      <commandTopic>cmd_vel</commandTopic>
