@@ -8,7 +8,7 @@ from tf2_ros import TransformBroadcaster
 from geometry_msgs.msg import TransformStamped
 from omni_msgs.msg import OmniDrive
 from rclpy.node import Node
-from tf_transformations import euler_from_quaternion  # Add this import
+from tf_transformations import euler_from_quaternion,quaternion_from_euler  # Add this import
 
 class OdometryPublisher:
     def __init__(self):
@@ -52,15 +52,18 @@ class OdometryPublisher:
 class OmniDriveController(Node):
     def __init__(self):
         super().__init__('omni_drive_controller')
+        self.get_logger().info("---------------------OmniDriveController Node Initalized----------------------")
         self.tf_broadcaster = TransformBroadcaster(self)
         self.map_to_odom_broadcaster = TransformBroadcaster(self)
         
         self.robot_x = 0.0
         self.robot_y = 0.0
         self.robot_theta = 0.0
+        self.wheel_radius = 0.042
+        self.link_length = 0.21
         
         self.odometry_publisher = OdometryPublisher()
-        self.last_callback_time = self.get_clock().now()
+        self.last_callback_time = self.get_clock().now().to_msg()
         
         self.twist_subscriber = self.create_subscription(
             Twist, 'cmd_vel', self.twist_callback, 10)
@@ -100,8 +103,8 @@ class OmniDriveController(Node):
         """
 
         
-        current_time = self.get_clock().now()
-        delta_t = (current_time - self.last_callback_time).to_sec()
+        current_time = self.get_clock().now().to_msg()
+        delta_t = (current_time.nanosec - self.last_callback_time.nanosec) / 1e9
         Vx = twist_msg.linear.x
         Vy = twist_msg.linear.y
         Vw = twist_msg.angular.z * self.wheel_radius
@@ -111,7 +114,7 @@ class OmniDriveController(Node):
 
         # Publish odometry position
         odom_msg = Odometry()
-        odom_msg.header.stamp = current_time.to_msg()
+        odom_msg.header.stamp = self.get_clock().now().to_msg()
         odom_msg.header.frame_id = 'odom_calc'
         odom_msg.child_frame_id = 'base_link'
         odom_msg.pose.pose.position.x = self.robot_x
@@ -129,7 +132,7 @@ class OmniDriveController(Node):
         
         # Publish tf transform
         transform_stamped = TransformStamped()
-        transform_stamped.header.stamp = current_time.to_msg()
+        transform_stamped.header.stamp = self.get_clock().now().to_msg()
         transform_stamped.header.frame_id = 'odom_calc'
         transform_stamped.child_frame_id = 'base_link'
         transform_stamped.transform.translation.x = self.robot_x
@@ -142,7 +145,7 @@ class OmniDriveController(Node):
 
         # Publish map to odom transform
         map_to_odom = TransformStamped()
-        map_to_odom.header.stamp = current_time.to_msg()
+        map_to_odom.header.stamp = self.get_clock().now().to_msg()
         map_to_odom.header.frame_id = 'map'
         map_to_odom.child_frame_id = 'odom_calc'
         map_to_odom.transform.translation.x = self.robot_x
