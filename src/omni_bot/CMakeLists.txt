@@ -47,6 +47,11 @@ install(PROGRAMS
   scripts/waypointCommands.py
   DESTINATION lib/${PROJECT_NAME}
 )
+
+install(PROGRAMS
+  scripts/omniController.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 ################################################################################
 # Macro for ament package
 ################################################################################

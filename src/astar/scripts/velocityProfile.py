@@ -62,10 +62,7 @@ class SmoothTrajectoryPlanner:
         velocity_commands = self.generate_segment_velocity_commands(
             distance, accel_time, segment_time, decel_time
         )
-        # self.publish_velocity_commands(velocity_commands)
-        # for i in velocity_commands:
-        #     print(i.linear.x,i.linear.y)
-        # print(velocity_commands)
+       
         self.path=None
     def generate_segment_velocity_commands(self, distance, accel_time, segment_time, decel_time):
         # Parameters for linear velocity profile
