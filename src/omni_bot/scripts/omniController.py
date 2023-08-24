@@ -6,6 +6,7 @@ from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from tf2_ros import TransformBroadcaster
 from geometry_msgs.msg import TransformStamped
+from omni_bot.msg import OmniDrive
 from rclpy.node import Node
 from tf_transformations import euler_from_quaternion  # Add this import
 
@@ -15,6 +16,7 @@ class OdometryPublisher:
         self.y = 0.0
         self.theta = 0.0
         self.wheel_radius = 0.042
+        self.link_length = 0.21
         self.expected_distance = 0.0
         self.actual_distance = 0.0
 
@@ -66,22 +68,44 @@ class OmniDriveController(Node):
         self.odom_publisher = self.create_publisher(
             Odometry, 'odom_calc', 1)
         
-        self.twist_publisher = self.create_publisher(
-            Twist, 'cmd_vel', 1)
+        
+        self.motors_publisher = self.create_publisher(
+            OmniDrive, 'motors_vel', 1)
         
         self.rate = self.create_rate(50)  # 50 Hz update rate
-    
+
+
+    def publish_wheel_velocities(self,Vx,Vy,Vw):
+        """!publish_wheel_velocities Takes required Velocity data and translates to the 3 Motors
+        Using The custom msg created OmniDrive
+        
+        @param Vx: Linear x @type Vx: float
+        @param Vy: Linear Y @type Vy: float
+        @param Vw: Angular z @type Vw: float
+        """
+        V1= (-Vx/2)-((math.sqrt(3)*Vy)/2)+self.link_length*Vw
+        V2= Vx+self.link_length*Vw
+        V3= (-Vx/2)+((math.sqrt(3)*Vy)/2)+self.link_length*Vw
+        drive=OmniDrive()
+        drive.motor1=V1
+        drive.motor2=V2
+        drive.motor3=V3
+        self.motors_publisher.publish(drive)
+
+
     def twist_callback(self, twist_msg):
         """!twist_callback Subscribes to velocity vector and passes data to Odometry update class
         publishes Odometry and TF
         @param twist_msg: Velocity Vector  @type twist_msg: Twist
         """
+
+        
         current_time = self.get_clock().now()
         delta_t = (current_time - self.last_callback_time).to_sec()
         Vx = twist_msg.linear.x
         Vy = twist_msg.linear.y
         Vw = twist_msg.angular.z * self.wheel_radius
-        
+        self.publish_wheel_velocities(Vx,Vy,Vw)
         self.odometry_publisher.update(Vx, Vy, Vw, delta_t)
         self.robot_x, self.robot_y, self.robot_theta = self.odometry_publisher.get_odometry()
 
