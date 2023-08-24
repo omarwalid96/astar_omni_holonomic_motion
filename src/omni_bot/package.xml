@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>omni_bot</name>
+  <version>0.0.1</version>
+  <maintainer email="omarwalid@outlook.com">Omar Walid</maintainer>
+  <description>
+    3D models of the omni_bot for simulation and visualization
+  </description>
+  <license>Apache 2.0</license>
+  <url type="website"></url>
+  <url type="repository"></url>
+  <url type="bugtracker"></url>
+  <author email="omarwalid@outlook.com">Omar Walid</author>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>urdf</depend>
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

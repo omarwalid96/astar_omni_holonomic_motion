@@ -1,0 +1,94 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Found urdf: 2.6.0 (/opt/ros/humble/share/urdf/cmake)
+-- Found rclcpp: 16.0.5 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found rclpy: 3.3.9 (/opt/ros/humble/share/rclpy/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/omni_ws/src/omni_bot/build/omni_bot
+Built target ament_cmake_python_copy_omni_bot
+running egg_info
+creating omni_bot.egg-info
+writing omni_bot.egg-info/PKG-INFO
+writing dependency_links to omni_bot.egg-info/dependency_links.txt
+writing top-level names to omni_bot.egg-info/top_level.txt
+writing manifest file 'omni_bot.egg-info/SOURCES.txt'
+reading manifest file 'omni_bot.egg-info/SOURCES.txt'
+writing manifest file 'omni_bot.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_omni_bot_egg
+-- Install configuration: ""
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/meshes
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/meshes/chassis.STL
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/spawn_robot.launch.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/robot_state_publisher.launch.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/gazebo.launch.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/gazebo.launch
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/test.launch.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/config
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/config/omni_bot.yaml
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/config/astar.rviz
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf/plugins.gazebo
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf/main.xacro
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf/roller.xacro
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf/rim.xacro
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/pythonpath.sh
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/pythonpath.dsv
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info/top_level.txt
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info/PKG-INFO
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot/__init__.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot/cell.py
+Listing '/home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot'...
+Compiling '/home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot/__init__.py'...
+Compiling '/home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot/cell.py'...
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/lib/omni_bot/mapPublisher.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/lib/omni_bot/astarPath.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/lib/omni_bot/robotFootprint.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/lib/omni_bot/waypointCommands.py
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/ament_index/resource_index/package_run_dependencies/omni_bot
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/ament_index/resource_index/parent_prefix_path/omni_bot
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/ament_prefix_path.sh
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/ament_prefix_path.dsv
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/path.sh
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/path.dsv
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/local_setup.bash
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/local_setup.sh
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/local_setup.zsh
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/local_setup.dsv
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/package.dsv
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/ament_index/resource_index/packages/omni_bot
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/cmake/omni_botConfig.cmake
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/cmake/omni_botConfig-version.cmake
+-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/package.xml

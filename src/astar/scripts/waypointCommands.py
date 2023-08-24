@@ -38,8 +38,8 @@ class WaypointFollower:
         self.path_subscriber = rospy.Subscriber('/path', Path, self.path_callback)
         self.pose_subscriber = rospy.Subscriber('/odom', Odometry, self.pose_callback)
          # Initialize PID controllers for linear x and linear y
-        self.pid_linear_x = PIDController(kp=2.0, ki=0.0, kd=1.5)
-        self.pid_linear_y = PIDController(kp=2.0, ki=0.0, kd=1.5)
+        self.pid_linear_x = PIDController(kp=28.0, ki=0.0, kd=22.0)
+        self.pid_linear_y = PIDController(kp=28.0, ki=0.0, kd=22.0)
         self.server = Server(WaypointFollowerConfig, self.reconfigure_callback)
 
     def reconfigure_callback(self, config, level):
@@ -99,20 +99,12 @@ class WaypointFollower:
                 distance_to_waypoint_y = current_waypoint.pose.position.y - self.robot_pose.position.y
                 
                 # # Calculate desired linear velocity for the x-axis based on the x distance error
-                # proportional_gain_linear_x = 35.5  # Adjust as needed
-                # desired_linear_velocity_x = proportional_gain_linear_x * distance_to_waypoint_x
-                
-                # # Calculate desired linear velocity for the y-axis based on the y distance error
-                # proportional_gain_linear_y = 35.5  # Adjust as needed
-                # desired_linear_velocity_y = proportional_gain_linear_y * distance_to_waypoint_y
-                # Calculate desired linear velocity for the x-axis based on the x distance error
                 desired_linear_velocity_x = self.pid_linear_x.compute(distance_to_waypoint_x)
                 
                 # Calculate desired linear velocity for the y-axis based on the y distance error
                 desired_linear_velocity_y = self.pid_linear_y.compute(distance_to_waypoint_y)
                 
                 # Limit the maximum linear velocities
-                  # Adjust as needed
                 if abs(desired_linear_velocity_x) > max_linear_velocity:
                     desired_linear_velocity_x = max_linear_velocity * np.sign(desired_linear_velocity_x)
                 if abs(desired_linear_velocity_y) > max_linear_velocity:

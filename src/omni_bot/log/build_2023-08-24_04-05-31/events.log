@@ -1,0 +1,186 @@
+[0.000000] (-) TimerEvent: {}
+[0.000579] (omni_bot) JobQueued: {'identifier': 'omni_bot', 'dependencies': OrderedDict()}
+[0.002182] (omni_bot) JobStarted: {'identifier': 'omni_bot'}
+[0.056239] (omni_bot) JobProgress: {'identifier': 'omni_bot', 'progress': 'cmake'}
+[0.078785] (omni_bot) Command: {'cmd': ['/usr/bin/cmake', '/home/omni_ws/src/omni_bot', '-DCMAKE_INSTALL_PREFIX=/home/omni_ws/src/omni_bot/install/omni_bot'], 'cwd': '/home/omni_ws/src/omni_bot/build/omni_bot', 'env': OrderedDict([('HOSTNAME', 'ce06a35802d5'), ('GIT_ASKPASS', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/extensions/git/dist/askpass.sh'), ('sim_time', 'true'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/omni_ws'), ('TERM_PROGRAM_VERSION', '1.77.3'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-16052093-52ad-433a-a5e8-4e8715ab7fbe.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/omni_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7ec245d1-4079-472a-9e9e-62038e83715e.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7ec245d1-4079-472a-9e9e-62038e83715e.sock","/tmp/.X11-unix/X1","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', 'novnc:0.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-4c83c919f4.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7ec245d1-4079-472a-9e9e-62038e83715e.sock'), ('AMENT_PREFIX_PATH', '/home/omni_ws/install/turtlebot3:/home/omni_ws/install/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_example:/home/omni_ws/install/turtlebot3_bringup:/home/omni_ws/install/turtlebot3_description:/home/omni_ws/install/omni_bot:/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X1'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/omni_ws/src/omni_bot/build/omni_bot'), ('LC_ALL', 'C.UTF-8'), ('use_sim_time', 'True'), ('PYTHONPATH', '/home/omni_ws/build/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/omni_ws/build/turtlebot3_example:/home/omni_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/omni_ws/install/omni_bot/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omni_ws/install/turtlebot3:/home/omni_ws/install/turtlebot3_bringup:/home/omni_ws/install/turtlebot3_description:/home/omni_ws/install/omni_bot:/home/omni_ws/install/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[0.096934] (-) TimerEvent: {}
+[0.197626] (-) TimerEvent: {}
+[0.301786] (-) TimerEvent: {}
+[0.402378] (-) TimerEvent: {}
+[0.454129] (omni_bot) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.502880] (-) TimerEvent: {}
+[0.603913] (-) TimerEvent: {}
+[0.653182] (omni_bot) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.693374] (omni_bot) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.704069] (-) TimerEvent: {}
+[0.805396] (-) TimerEvent: {}
+[0.905842] (-) TimerEvent: {}
+[1.006478] (-) TimerEvent: {}
+[1.126682] (-) TimerEvent: {}
+[1.127628] (omni_bot) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.150074] (omni_bot) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.151328] (omni_bot) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.152121] (omni_bot) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.157107] (omni_bot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.226831] (-) TimerEvent: {}
+[1.328286] (-) TimerEvent: {}
+[1.432898] (-) TimerEvent: {}
+[1.533370] (-) TimerEvent: {}
+[1.636281] (-) TimerEvent: {}
+[1.642684] (omni_bot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.657943] (omni_bot) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.658484] (omni_bot) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.659604] (omni_bot) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.669376] (omni_bot) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.736498] (-) TimerEvent: {}
+[1.837017] (-) TimerEvent: {}
+[1.937967] (-) TimerEvent: {}
+[2.038481] (-) TimerEvent: {}
+[2.140214] (-) TimerEvent: {}
+[2.241346] (-) TimerEvent: {}
+[2.342973] (-) TimerEvent: {}
+[2.411895] (omni_bot) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[2.444938] (-) TimerEvent: {}
+[2.545743] (-) TimerEvent: {}
+[2.647506] (-) TimerEvent: {}
+[2.708963] (omni_bot) StdoutLine: {'line': b'-- Found urdf: 2.6.0 (/opt/ros/humble/share/urdf/cmake)\n'}
+[2.747611] (-) TimerEvent: {}
+[2.835236] (omni_bot) StdoutLine: {'line': b'-- Found rclcpp: 16.0.5 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.847778] (-) TimerEvent: {}
+[2.925665] (omni_bot) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.938801] (omni_bot) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.947859] (-) TimerEvent: {}
+[2.998316] (omni_bot) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.046254] (omni_bot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.047964] (-) TimerEvent: {}
+[3.101946] (omni_bot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.148135] (-) TimerEvent: {}
+[3.249098] (-) TimerEvent: {}
+[3.284878] (omni_bot) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[3.293463] (omni_bot) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.349309] (-) TimerEvent: {}
+[3.449959] (-) TimerEvent: {}
+[3.550872] (-) TimerEvent: {}
+[3.653452] (-) TimerEvent: {}
+[3.754959] (-) TimerEvent: {}
+[3.855667] (-) TimerEvent: {}
+[3.957907] (-) TimerEvent: {}
+[3.976708] (omni_bot) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[4.058060] (-) TimerEvent: {}
+[4.099896] (omni_bot) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[4.158225] (-) TimerEvent: {}
+[4.260033] (-) TimerEvent: {}
+[4.274435] (omni_bot) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.303778] (omni_bot) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[4.360434] (-) TimerEvent: {}
+[4.466797] (-) TimerEvent: {}
+[4.567529] (-) TimerEvent: {}
+[4.668003] (-) TimerEvent: {}
+[4.740508] (omni_bot) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[4.740738] (omni_bot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[4.768054] (-) TimerEvent: {}
+[4.868455] (-) TimerEvent: {}
+[4.969143] (-) TimerEvent: {}
+[5.004041] (omni_bot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[5.006776] (omni_bot) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.069224] (-) TimerEvent: {}
+[5.169736] (-) TimerEvent: {}
+[5.270797] (-) TimerEvent: {}
+[5.371486] (-) TimerEvent: {}
+[5.462254] (omni_bot) StdoutLine: {'line': b'-- Found rclpy: 3.3.9 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[5.471644] (-) TimerEvent: {}
+[5.572307] (-) TimerEvent: {}
+[5.677462] (-) TimerEvent: {}
+[5.778399] (-) TimerEvent: {}
+[5.886640] (omni_bot) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.886933] (-) TimerEvent: {}
+[5.903548] (omni_bot) StdoutLine: {'line': b'-- Generating done\n'}
+[5.921918] (omni_bot) StdoutLine: {'line': b'-- Build files have been written to: /home/omni_ws/src/omni_bot/build/omni_bot\n'}
+[5.992183] (omni_bot) CommandEnded: {'returncode': 0}
+[5.993306] (-) TimerEvent: {}
+[5.993776] (omni_bot) JobProgress: {'identifier': 'omni_bot', 'progress': 'build'}
+[5.993838] (omni_bot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/omni_ws/src/omni_bot/build/omni_bot', '--', '-j12', '-l12'], 'cwd': '/home/omni_ws/src/omni_bot/build/omni_bot', 'env': OrderedDict([('HOSTNAME', 'ce06a35802d5'), ('GIT_ASKPASS', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/extensions/git/dist/askpass.sh'), ('sim_time', 'true'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/omni_ws'), ('TERM_PROGRAM_VERSION', '1.77.3'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-16052093-52ad-433a-a5e8-4e8715ab7fbe.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/omni_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7ec245d1-4079-472a-9e9e-62038e83715e.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7ec245d1-4079-472a-9e9e-62038e83715e.sock","/tmp/.X11-unix/X1","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', 'novnc:0.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-4c83c919f4.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7ec245d1-4079-472a-9e9e-62038e83715e.sock'), ('AMENT_PREFIX_PATH', '/home/omni_ws/install/turtlebot3:/home/omni_ws/install/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_example:/home/omni_ws/install/turtlebot3_bringup:/home/omni_ws/install/turtlebot3_description:/home/omni_ws/install/omni_bot:/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X1'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/omni_ws/src/omni_bot/build/omni_bot'), ('LC_ALL', 'C.UTF-8'), ('use_sim_time', 'True'), ('PYTHONPATH', '/home/omni_ws/build/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/omni_ws/build/turtlebot3_example:/home/omni_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/omni_ws/install/omni_bot/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omni_ws/install/turtlebot3:/home/omni_ws/install/turtlebot3_bringup:/home/omni_ws/install/turtlebot3_description:/home/omni_ws/install/omni_bot:/home/omni_ws/install/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[6.093443] (-) TimerEvent: {}
+[6.194036] (-) TimerEvent: {}
+[6.274402] (omni_bot) StdoutLine: {'line': b'Built target ament_cmake_python_copy_omni_bot\n'}
+[6.294319] (-) TimerEvent: {}
+[6.394657] (-) TimerEvent: {}
+[6.495295] (-) TimerEvent: {}
+[6.595642] (-) TimerEvent: {}
+[6.696259] (-) TimerEvent: {}
+[6.796898] (-) TimerEvent: {}
+[6.903207] (-) TimerEvent: {}
+[6.944817] (omni_bot) StdoutLine: {'line': b'running egg_info\n'}
+[6.948106] (omni_bot) StdoutLine: {'line': b'creating omni_bot.egg-info\n'}
+[6.950507] (omni_bot) StdoutLine: {'line': b'writing omni_bot.egg-info/PKG-INFO\n'}
+[6.952904] (omni_bot) StdoutLine: {'line': b'writing dependency_links to omni_bot.egg-info/dependency_links.txt\n'}
+[6.954417] (omni_bot) StdoutLine: {'line': b'writing top-level names to omni_bot.egg-info/top_level.txt\n'}
+[6.955349] (omni_bot) StdoutLine: {'line': b"writing manifest file 'omni_bot.egg-info/SOURCES.txt'\n"}
+[6.958339] (omni_bot) StdoutLine: {'line': b"reading manifest file 'omni_bot.egg-info/SOURCES.txt'\n"}
+[6.959117] (omni_bot) StdoutLine: {'line': b"writing manifest file 'omni_bot.egg-info/SOURCES.txt'\n"}
+[7.003307] (-) TimerEvent: {}
+[7.011016] (omni_bot) StdoutLine: {'line': b'Built target ament_cmake_python_build_omni_bot_egg\n'}
+[7.083142] (omni_bot) CommandEnded: {'returncode': 0}
+[7.103526] (-) TimerEvent: {}
+[7.204091] (-) TimerEvent: {}
+[7.304787] (-) TimerEvent: {}
+[7.423854] (omni_bot) JobProgress: {'identifier': 'omni_bot', 'progress': 'install'}
+[7.424082] (-) TimerEvent: {}
+[7.435735] (omni_bot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/omni_ws/src/omni_bot/build/omni_bot'], 'cwd': '/home/omni_ws/src/omni_bot/build/omni_bot', 'env': OrderedDict([('HOSTNAME', 'ce06a35802d5'), ('GIT_ASKPASS', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/extensions/git/dist/askpass.sh'), ('sim_time', 'true'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/omni_ws'), ('TERM_PROGRAM_VERSION', '1.77.3'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-16052093-52ad-433a-a5e8-4e8715ab7fbe.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/omni_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7ec245d1-4079-472a-9e9e-62038e83715e.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7ec245d1-4079-472a-9e9e-62038e83715e.sock","/tmp/.X11-unix/X1","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', 'novnc:0.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-4c83c919f4.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7ec245d1-4079-472a-9e9e-62038e83715e.sock'), ('AMENT_PREFIX_PATH', '/home/omni_ws/install/turtlebot3:/home/omni_ws/install/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_example:/home/omni_ws/install/turtlebot3_bringup:/home/omni_ws/install/turtlebot3_description:/home/omni_ws/install/omni_bot:/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X1'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/omni_ws/src/omni_bot/build/omni_bot'), ('LC_ALL', 'C.UTF-8'), ('use_sim_time', 'True'), ('PYTHONPATH', '/home/omni_ws/build/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/omni_ws/build/turtlebot3_example:/home/omni_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/omni_ws/install/omni_bot/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omni_ws/install/turtlebot3:/home/omni_ws/install/turtlebot3_bringup:/home/omni_ws/install/turtlebot3_description:/home/omni_ws/install/omni_bot:/home/omni_ws/install/turtlebot3_teleop:/home/omni_ws/install/turtlebot3_example:/opt/ros/humble')]), 'shell': False}
+[7.476568] (omni_bot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.477053] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/meshes\n'}
+[7.477554] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/meshes/chassis.STL\n'}
+[7.478055] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch\n'}
+[7.478387] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/spawn_robot.launch.py\n'}
+[7.478753] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/robot_state_publisher.launch.py\n'}
+[7.479118] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/gazebo.launch.py\n'}
+[7.479466] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/gazebo.launch\n'}
+[7.479810] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/launch/test.launch.py\n'}
+[7.480151] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/config\n'}
+[7.480473] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/config/omni_bot.yaml\n'}
+[7.491486] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/config/astar.rviz\n'}
+[7.492125] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf\n'}
+[7.492298] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf/plugins.gazebo\n'}
+[7.492440] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf/main.xacro\n'}
+[7.492991] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf/roller.xacro\n'}
+[7.493181] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/urdf/rim.xacro\n'}
+[7.493367] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/pythonpath.sh\n'}
+[7.493599] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/pythonpath.dsv\n'}
+[7.494169] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info\n'}
+[7.494440] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[7.494847] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info/top_level.txt\n'}
+[7.495232] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info/PKG-INFO\n'}
+[7.495601] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot-0.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[7.496026] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot\n'}
+[7.496350] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot/__init__.py\n'}
+[7.496708] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot/cell.py\n'}
+[7.524190] (-) TimerEvent: {}
+[7.624656] (-) TimerEvent: {}
+[7.637007] (omni_bot) StdoutLine: {'line': b"Listing '/home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot'...\n"}
+[7.637241] (omni_bot) StdoutLine: {'line': b"Compiling '/home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot/__init__.py'...\n"}
+[7.637372] (omni_bot) StdoutLine: {'line': b"Compiling '/home/omni_ws/src/omni_bot/install/omni_bot/local/lib/python3.10/dist-packages/omni_bot/cell.py'...\n"}
+[7.648860] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/lib/omni_bot/mapPublisher.py\n'}
+[7.653023] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/lib/omni_bot/astarPath.py\n'}
+[7.654078] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/lib/omni_bot/robotFootprint.py\n'}
+[7.655584] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/lib/omni_bot/waypointCommands.py\n'}
+[7.656383] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/ament_index/resource_index/package_run_dependencies/omni_bot\n'}
+[7.656888] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/ament_index/resource_index/parent_prefix_path/omni_bot\n'}
+[7.657570] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/ament_prefix_path.sh\n'}
+[7.659814] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/ament_prefix_path.dsv\n'}
+[7.660309] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/path.sh\n'}
+[7.660747] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/environment/path.dsv\n'}
+[7.661164] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/local_setup.bash\n'}
+[7.662666] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/local_setup.sh\n'}
+[7.663315] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/local_setup.zsh\n'}
+[7.663783] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/local_setup.dsv\n'}
+[7.664193] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/package.dsv\n'}
+[7.670014] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/ament_index/resource_index/packages/omni_bot\n'}
+[7.670759] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/cmake/omni_botConfig.cmake\n'}
+[7.671164] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/cmake/omni_botConfig-version.cmake\n'}
+[7.671583] (omni_bot) StdoutLine: {'line': b'-- Installing: /home/omni_ws/src/omni_bot/install/omni_bot/share/omni_bot/package.xml\n'}
+[7.675209] (omni_bot) CommandEnded: {'returncode': 0}
+[7.738529] (-) TimerEvent: {}
+[7.841247] (-) TimerEvent: {}
+[7.946981] (-) TimerEvent: {}
+[8.037040] (omni_bot) JobEnded: {'identifier': 'omni_bot', 'rc': 0}
+[8.038289] (-) EventReactorShutdown: {}
