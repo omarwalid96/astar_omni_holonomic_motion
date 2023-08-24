@@ -29,9 +29,8 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 
 
 ## Solution
-[Video](https://imgur.com/yh2QjKe)
-![Video](https://imgur.com/yh2QjKe)
-![Path](https://imgur.com/EWTWwQT)
+![Video](https://i.imgur.com/UYCaZkp.gif)
+![Path](https://i.imgur.com/EWTWwQT.png)
 ## Instillation
 
 ### Ros2 Humble
@@ -47,7 +46,7 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 
 ## 🎈 Usage <a name="usage"></a>
 
-- Gui opens and you can instantly send commands from **2d goal pose** ![goal](https://imgur.com/gsQyRdB)
+- Gui opens and you can instantly send commands from **2d goal pose** ![goal](https://i.imgur.com/gsQyRdB.png)
 
 ### Ros2 Humble
 1. `cd working_dir/zal_robotics_engineer_task`
@@ -56,7 +55,7 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 1. run `docker run -d --rm --net=ros  --env="DISPLAY_WIDTH=3000" --env="DISPLAY_HEIGHT=1800" --env="RUN_XTERM=no" --name=novnc -p=8080:8080  theasp/novnc:latest`
 2. run `docker run  -it --net="ros"  --privileged omarwalid96/ros2-zal-task /bin/bash -c "sleep 2;cd /home/zal_robotics_engineer_task ; source /opt/ros/humble/setup.bash; source ./install/setup.bash; ros2 launch omni_bot zal_task.launch.py"`
 3. connect to viewer on `http://localhost:8080/vnc.html`
-![Connect](https://imgur.com/ohAMiEX)
+![Connect](https://i.imgur.com/ohAMiEX.png)
 
 
 ## ✍️ Authors <a name = "authors"></a>
@@ -103,7 +102,7 @@ Two Models are side by side, one publishes on `/odom` and the other on `/odom_ca
 
 From the data taken from the `/cmd_vel` topic, we can calculate Velocities for each motor and Also Odometry.
 
-<img src="https://camo.githubusercontent.com/7c70deb1b3ffd595c18b1bad558f71fd7997743fa90d7db69a25632aa4af92a0/68747470733a2f2f63646e2e7261776769742e636f6d2f4775695269747465722f4f70656e426173652f6d61737465722f696d616765732f67656f6d657472792e737667" alt="Image" style="width:50%; height:50%;">
+<img src="https://camo.githubusercontent.com/7c70deb1b3ffd595c18b1bad558f71fd7997743fa90d7db69a25632aa4af92a0/68747470733a2f2f63646e2e7261776769742e636f6d2f4775695269747465722f4f70656e426173652f6d61737465722f696d616765732f67656f6d657472792e737667" alt="Image" style="width:25%; height:25%;">
 
 
 ![0](https://camo.githubusercontent.com/6b5f3b9b567fb03759a116b4105aef5526cd4fa437dc8ab80d13710236d66863/68747470733a2f2f63646e2e7261776769742e636f6d2f4775695269747465722f4f70656e426173652f6d61737465722f696d616765732f666f72776172645f6d6f62696c652e737667)
