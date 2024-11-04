@@ -34,7 +34,7 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 ## Instillation
 
 ### Ros2 Humble
-`git clone https://oauth2:glpat-ENRdy37JunsqwTFEqnYb@gitlab.com/omarwalid96/zal_robotics_engineer_task.git`
+`git clone https://gitlab.com/omarwalid96/zal_robotics_engineer_task.git`
  
 ### Docker
 1. install noVNC `docker pull theasp/novnc:latest`
