@@ -1,5 +1,5 @@
 
-<h1 align="center">Zal Robotics Engineer Task</h1>
+<h1 align="center">Astar Omni Holonomic Motion</h1>
 
 ----
 ## 📝Table of Contents
@@ -25,8 +25,7 @@
 - [Directory Tree](#directory-tree)
 
 ## Code Docs
-https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
-
+https://omarwalid96.gitlab.io/astar_omni_holonomic_motion/
 
 ## Solution
 ![Video](https://i.imgur.com/UYCaZkp.gif)
@@ -34,7 +33,7 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 ## Instillation
 
 ### Ros2 Humble
-`git clone https://gitlab.com/omarwalid96/zal_robotics_engineer_task.git`
+`git clone https://gitlab.com/omarwalid96/astar_omni_holonomic_motion.git`
  
 ### Docker
 1. install noVNC `docker pull theasp/novnc:latest`
@@ -49,11 +48,11 @@ https://omarwalid96.gitlab.io/zal_robotics_engineer_task/
 - Gui opens and you can instantly send commands from **2d goal pose** <img src="https://i.imgur.com/gsQyRdB.png" alt="Image" style="width:75%; height:75%;">
 
 ### Ros2 Humble
-1. `cd working_dir/zal_robotics_engineer_task`
+1. `cd working_dir/astar_omni_holonomic_motion`
 2. `source /opt/ros/humble/setup.bash; source ./install/setup.bash; ros2 launch omni_bot zal_task.launch.py`
 ### Docker
 1. run `docker run -d --rm --net=ros  --env="DISPLAY_WIDTH=3000" --env="DISPLAY_HEIGHT=1800" --env="RUN_XTERM=no" --name=novnc -p=8080:8080  theasp/novnc:latest`
-2. run `docker run  -it --net="ros"  --privileged omarwalid96/ros2-zal-task /bin/bash -c "sleep 2;cd /home/zal_robotics_engineer_task ; source /opt/ros/humble/setup.bash; source ./install/setup.bash; ros2 launch omni_bot zal_task.launch.py"`
+2. run `docker run  -it --net="ros"  --privileged omarwalid96/ros2-zal-task /bin/bash -c "sleep 2;cd /home/astar_omni_holonomic_motion ; source /opt/ros/humble/setup.bash; source ./install/setup.bash; ros2 launch omni_bot zal_task.launch.py"`
 3. connect to viewer on `http://localhost:8080/vnc.html`
 <img src="https://i.imgur.com/ohAMiEX.png" alt="Image" style="width:75%; height:75%;">
 
